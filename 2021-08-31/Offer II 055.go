@@ -8,6 +8,7 @@
  */
 // 1. 使用栈保存节点指针，初始化时仅从根节点一左到底，没有完全中序遍历整颗二叉树；
 // 2. Next方法：弹出栈顶，判断是否存在右子树，如果存在，再次一左到底；然后返回栈顶对应val；
+// space: O(h), h is height of BST tree; time: O(1)（总共n次Next均摊时间复杂度为1）
 type BSTIterator struct {
 	arr []*TreeNode
 }
